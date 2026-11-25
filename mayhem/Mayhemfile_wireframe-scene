@@ -1,0 +1,11 @@
+project: savantenvs/visp
+target: wireframe-scene
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wireframe-scene/testsuite
+
+cmds:
+  - cmd: /mayhem/build/harnesses/fuzz_wireframe_scene
+    libfuzzer: true
+    timeout: 10

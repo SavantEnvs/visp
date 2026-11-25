@@ -1,0 +1,11 @@
+project: savantenvs/visp
+target: image-read-stb
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/image-read-stb/testsuite
+
+cmds:
+  - cmd: /mayhem/build/harnesses/fuzz_image_read_stb
+    libfuzzer: true
+    timeout: 10

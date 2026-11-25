@@ -1,0 +1,11 @@
+project: savantenvs/visp
+target: config-file
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/config-file/testsuite
+
+cmds:
+  - cmd: /mayhem/build/harnesses/fuzz_config_file
+    libfuzzer: true
+    timeout: 10

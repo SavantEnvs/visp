@@ -1,0 +1,11 @@
+project: savantenvs/visp
+target: mbt-xml-config
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mbt-xml-config/testsuite
+
+cmds:
+  - cmd: /mayhem/build/harnesses/fuzz_mbt_xml_config
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,11 @@
+project: savantenvs/visp
+target: array2d-load
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/array2d-load/testsuite
+
+cmds:
+  - cmd: /mayhem/build/harnesses/fuzz_array2d_load
+    libfuzzer: true
+    timeout: 10

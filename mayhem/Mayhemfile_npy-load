@@ -1,0 +1,11 @@
+project: savantenvs/visp
+target: npy-load
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/npy-load/testsuite
+
+cmds:
+  - cmd: /mayhem/build/harnesses/fuzz_npy_load
+    libfuzzer: true
+    timeout: 10

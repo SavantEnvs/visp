@@ -1,0 +1,11 @@
+project: savantenvs/visp
+target: image-read-portable
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/image-read-portable/testsuite
+
+cmds:
+  - cmd: /mayhem/build/harnesses/fuzz_image_read_portable
+    libfuzzer: true
+    timeout: 10

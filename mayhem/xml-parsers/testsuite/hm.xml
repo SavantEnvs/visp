@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<root>
+<homogeneous_transformation>
+<name>eMc</name>
+<values>
+<tx>0.1</tx><ty>0.2</ty><tz>0.3</tz><theta_ux>0.1</theta_ux><theta_uy>0</theta_uy><theta_uz>0.5</theta_uz>
+</values>
+</homogeneous_transformation>
+</root>
